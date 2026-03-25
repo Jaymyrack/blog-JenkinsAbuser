@@ -1,10 +1,16 @@
-name: Hugo to Pages and Azure
+
+name: Hugo to Pages and Azure - hmis-JenkinsAbuser
 
 on:
   push:
     branches:
       - main
   workflow_dispatch:
+
+# Permisos globales para que el Login de Azure y el Push a GitHub funcionen
+permissions:
+  id-token: write
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -25,14 +31,14 @@ jobs:
       - name: Build with Hugo
         run: hugo --minify
 
-      # ESTE PASO SUBE LA CARPETA PUBLIC A GITHUB PAGES AUTOMÁTICAMENTE
+      # 1. Despliegue a GitHub Pages (esto crea la carpeta en tu repo)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
 
-      # ESTE PASO ENVÍA LO MISMO A AZURE
+      # 2. Login en Azure usando tus credenciales guardadas
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -40,8 +46,10 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FDDF3B3DCFC040F0A1E5100A79869EAE }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_468DBE163D614E44B1A822501FDA3212 }}
 
+      # 3. Despliegue al App Service de Azure
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'hmis-JenkinsAbuser'
+          slot-name: 'Production'
           package: ./public
