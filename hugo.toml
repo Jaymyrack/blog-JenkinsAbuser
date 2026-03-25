@@ -1,0 +1,60 @@
+baseURL = "/"
+canonifyURLs = true
+title = "JenkinsAbuser"
+theme = "hugo-blog-awesome"
+
+defaultContentLanguage = "es-es"
+enableEmoji = true
+disableKinds = ["RSS"]
+
+[author]
+  name = "Pedro Javier Avila Navarro"
+  email = "pedjavavinav64@hotmail.com"
+
+[Languages.es-es]
+  languageName = "Español"
+  languageCode = "es-es"
+  contentDir = "content/es"
+  weight = 1
+
+  [[Languages.es-es.menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = 10
+
+  [[Languages.es-es.menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 20
+
+  [[Languages.es-es.menu.main]]
+    name = "Acerca de Hugo"
+    url = "/about/"
+    weight = 30
+    
+  [[Languages.es-es.menu.main]]
+    name = "Desarrolladores"
+    url = "/desarrolladores/"
+    weight = 40
+
+  [[Languages.es-es.menu.main]]
+    name = "Contacto"
+    url = "/contacto/"
+    weight = 50
+
+[Languages.es-es.params]
+  sitename = "JenkinsAbuser"
+  description = "Blog del equipo HMIS con Hugo"
+  mainSections = ["pages", "posts"]
+  toc = true
+  tocOpen = false
+  goToTop = true
+
+[Languages.es-es.params.author]
+  avatar = "avatar.jpg"
+  intro = "Blog del Equipo 6 (JenkinsAbuser)"
+  name = "JenkinsAbuser"
+  description = "Estudiantes de ingeniería informática"
+
+[markup.goldmark.renderer]
+  unsafe = true

@@ -1,0 +1,91 @@
+<!-- Contenedor de portada con imagen flotante -->
+<div style="position:relative; max-width:1200px; margin:0 auto; font-family:'Georgia', serif;">
+
+    <!-- Imagen de portada -->
+    <img src="/assets/portada.jpeg" 
+         alt="Portada" 
+         style="width:100%; height:10cm; object-fit:cover; display:block;">
+
+    <!-- Avatar logo ual -->
+    <img src="/assets/avatar.jpg" 
+         alt="Universidad de Almeria" 
+         style="
+            position:absolute; 
+            left:60px; 
+            bottom:0; 
+            transform:translateY(50%); 
+            width:250px; 
+            height:250px; 
+            object-fit:cover; 
+            border-radius:10px;
+         ">
+
+    <!-- Título -->
+    <div style="
+          position:absolute;
+          left:50%;
+          top:42%;                 
+          transform:translateX(-50%);
+          color:white;
+          font-size:3em;
+          font-weight:bold;
+          text-align:center;
+          text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+          ">
+          BLOG DEL EQUIPO 6
+    </div>
+
+    <!-- Subtítulo -->
+    <div style="
+          position:absolute;
+          left:50%;
+          top:54%;                
+          transform:translateX(-50%);
+          font-style:italic;
+          font-size:2em;
+          color:#555;
+          text-align:center;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    ">
+        JenkinsAbuser
+    </div>
+
+</div>
+
+<!-- Primer párrafo (flexbox) -->
+<div style="display:flex; max-width:1200px; margin:20px auto; gap:30px; align-items:flex-start; font-family:'Georgia', serif; text-align:justify;">
+
+    <!-- Espacio izquierdo para la imagen -->
+    <div style="width:250px;"></div>
+
+    <!-- Bloque de texto de bienvenida -->
+     <div style="flex:1; min-width:0; margin-left:2cm;">
+          <p style="line-height:1.7em; font-size:1em;">
+               ¡Bienvenidos a nuestro blog! En esta sesión 04 estamos desarrollando un proyecto práctico usando el <strong>framework Hugo</strong>. Hugo nos permite crear sitios web estáticos de manera rápida, eficiente y profesional, con la posibilidad de personalizar el diseño y la estructura según nuestras necesidades.
+          </p>
+     </div>
+
+</div>
+
+<!-- Resto del contenido -->
+<div style="max-width:1200px; margin:0 auto; line-height:1.7em; font-size:1em; font-family:'Georgia', serif; text-align:justify;">
+    <p>El objetivo de este blog es documentar nuestro trabajo en el equipo HMIS, compartir conocimientos sobre desarrollo web estático y mostrar cómo se pueden combinar herramientas modernas de despliegue y hosting.</p>
+
+    <p>En esta primera fase estamos configurando la página de inicio para que sirva como introducción clara al proyecto. Queremos que los visitantes comprendan de inmediato el propósito del blog, nuestra metodología y cómo navegar por los contenidos principales.</p>
+
+    <p>Estamos utilizando este blog para:</p>
+    <ul>
+      <li>Explicar cómo funciona Hugo y cómo estructuramos un sitio web estático.</li>
+      <li>Practicar el despliegue en <strong>GitHub Pages</strong> y en <strong>Microsoft Azure</strong> como sitios web estáticos.</li>
+      <li>Documentar paso a paso la evolución del proyecto del equipo HMIS.</li>
+      <li>Crear una referencia práctica para futuros desarrollos web en equipo.</li>
+    </ul>
+
+    <p>Además, en este blog encontrarás secciones dedicadas a los desarrolladores del equipo, posts con detalles técnicos y explicaciones de cada sesión de trabajo. Nuestro objetivo es que, aunque estés llegando por primera vez, tengas toda la información necesaria para entender el proyecto y explorar los contenidos relacionados.</p>
+
+    <p>Puedes comenzar viendo nuestros próximos <a href="./posts/" style="color:#203a43; text-decoration:underline;">Posts</a>, donde documentamos cada avance, problemas que hemos resuelto y aprendizajes clave. También encontrarás información sobre nuestro equipo en la sección de <a href="./pages/desarrolladores/" style="color:#203a43; text-decoration:underline;">Desarrolladores</a>, así como contacto y recursos adicionales.</p>
+
+    <p>Estamos convencidos de que un buen blog no solo documenta, sino que también inspira y guía a otros desarrolladores. Por eso, cada entrada está pensada para aportar valor, claridad y ejemplos prácticos que puedan ser replicados en proyectos propios.</p>
+
+    <p>¡Esperamos que disfrutes explorando JenkinsAbuser y aprendas tanto como nosotros mientras lo desarrollamos!</p>
+</div>
