@@ -1,0 +1,20 @@
+{
+    "name": "JenkinsAbuser",
+    "short_name": "JenkinsAbuser",
+    "start_url": "https://Jaymyrack.github.io/blog-JenkinsAbuser/",
+    "theme_color": "#434648",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/blog-JenkinsAbuser/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/blog-JenkinsAbuser/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
